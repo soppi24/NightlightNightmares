@@ -6,10 +6,10 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab;       
     public Transform prizeObject;         
     public Collider2D backgroundCollider; 
-    public int maxEnemies = 5;           
-    public float spawnInterval = 3f;      
-    public float minSpawnDistanceFromRV = 5f;   
-    public float minSpawnDistanceBetweenEnemies = 2f; 
+    public int maxEnemies = 10;           
+    public float spawnInterval = 5f;      
+    public float minSpawnDistanceFromRV = 2f;   
+    public float minSpawnDistanceBetweenEnemies = 15f; 
 
     private List<GameObject> enemies = new List<GameObject>();
 
@@ -69,7 +69,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (backgroundCollider == null)
         {
-            Debug.LogError("EnemySpawner: Background Collider is missing.");
+            Debug.LogError("EnemySpawner: Park Background Collider is missing. Need for bounds");
             return Vector2.zero; 
         }
 
@@ -85,12 +85,8 @@ public class EnemySpawner : MonoBehaviour
 
             attempts++;
         }
+        // Try for 50 max attempts. Then don't bother placing
         while ((!IsFarEnoughFromPrize(spawnPosition) || !IsFarEnoughFromEnemies(spawnPosition)) && attempts < 50);
-
-        if (attempts >= 50)
-        {
-            Debug.LogWarning("EnemySpawner: Could not find a valid spawn position after 50 attempts.");
-        }
 
         return spawnPosition;
     }
@@ -111,7 +107,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
         Bounds prizeBounds = prizeCollider.bounds;
-
+        
         if (prizeBounds.Contains(position))
         {
             return false;
