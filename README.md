@@ -1,6 +1,9 @@
 # Nightlight Nightmares - Installation Guide
 
 A 2D Unity game where you play as Rosa with a flashlight, protecting her family's RV from creepy enemies in a dark park.
+![img.png](img.png)
+![img_4.png](img_4.png)
+
 ## Controls
 
 - **WASD** or **Arrow Keys** - Move Rosa
@@ -56,8 +59,10 @@ git clone https://github.com/soppi24/NightlightNightmares.git
 1. Open **Unity Hub**
 2. Click the **"Projects"** tab
 3. Click **"Add"** dropdown → **"Add project from disk"**
+
+![img_1.png](img_1.png)
 4. Navigate to the folder you just downloaded
-5. Select the folder and click **"Add Project"**
+5. Select the folder and click **"Open"**
 6. The project should now appear in your Projects list
 7. Click on it to open!
 
@@ -67,7 +72,11 @@ git clone https://github.com/soppi24/NightlightNightmares.git
 
 Once Unity Editor opens:
 1. In the **Project** window (bottom), navigate to `Assets/Scenes/`
+
+![img_2.png](img_2.png)
 2. Double-click the main scene to open it (It's the ONLY scene there)
+
+![img_3.png](img_3.png)
 3. Click the **Play button** at the top center
 4. The game should start!
 
