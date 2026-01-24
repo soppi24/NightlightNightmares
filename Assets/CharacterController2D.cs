@@ -89,6 +89,7 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+    // This function too
     void FixedUpdate()
     {
 
