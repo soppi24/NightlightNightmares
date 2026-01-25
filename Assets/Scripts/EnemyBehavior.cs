@@ -50,7 +50,8 @@ public class EnemyBehavior : MonoBehaviour
 
         else if (colliderName == playerBodyCollider)
         {
-            HandleDeath("Enemy NOT destroyed by flashlight beam! Rosa RUN");
+            //HandleDeath("Enemy NOT destroyed by flashlight beam! Rosa RUN");
+            Debug.Log("Enemy NOT destroyed by flashlight beam! Rosa RUN");
             // Don't do this lol, a future feature or challenge is making the character die after being touched,
             // Perhaps in the same method or another
         }
